@@ -31,8 +31,8 @@ while is_game_on:
         if seg == snake.head:
             pass
         elif snake.head.distance(seg) < 3:
-            is_game_on = False
-            score.game_over()
+            score.reset()
+            snake.reset()
 
 
 screen.exitonclick()

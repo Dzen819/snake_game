@@ -16,6 +16,13 @@ class Snake:
             snake.goto(snake.xcor() - 5 * i, 0)
             self.snake_body.append(snake)
 
+    def reset(self):
+        for snk in self.snake_body:
+            snk.goto(1000, 1000)
+        self.snake_body.clear()
+        self.create_snake()
+        self.head = self.snake_body[0]
+
     def extend(self):
         for i in range(4):
             snake = Turtle()
